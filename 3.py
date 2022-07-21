@@ -15,11 +15,11 @@ def input_number():
 def simple_factors_list(number) -> list:
     lst = []
     divider = 2
-    while number > 1: # 6
-        if number % divider == 0: # t
+    while number > 1: 
+        if number % divider == 0: 
             number //= divider
-            if divider not in lst: # 6
-                lst.append(divider) # 3
+            if divider not in lst: 
+                lst.append(divider) 
             else:
                 continue
         else:
