@@ -3,14 +3,6 @@
 # Мама сшила м0не штаны и7з бере9зовой кор45ы 893. -> Мама сшила штаны.
 
 
-file = open('4.txt', 'r', encoding='utf-8')
-stroka = " "
-for line in file.read():
-    stroka = line
-file.close()
-
-
-
 
 
 def find_words_with_digits(strochka: str) -> str:
@@ -38,10 +30,18 @@ def delete_words_with_digits(strochka, temp_str: str) -> list:
 
 
 if __name__ == '__main__':
+    with open('4.txt', 'w', encoding='utf-8') as file:
+        file.write("Мама сшила м0не штаны и7з бере9зовой кор45ы 893.")
+
+    with open('4.txt', encoding='utf-8') as file:
+        stroka = file.read()
+
     print('Initial string: ', stroka)
     temp_str = find_words_with_digits(stroka)
     print('Words with digits:', find_words_with_digits(stroka).split())
-    result_string = delete_words_with_digits(stroka,temp_str)
-    print('String without words with digits:', " ".join(result_string))
+    result_list = delete_words_with_digits(stroka,temp_str)
+    result_string = " ".join(result_list)
+    print('String without words with digits:', result_string)
 
-
+    with open('4.txt', 'w', encoding='utf-8') as file:
+        file.write(result_string)
