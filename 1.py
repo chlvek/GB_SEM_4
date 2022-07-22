@@ -1,3 +1,4 @@
+
 from math import factorial as fa
 
 
@@ -15,30 +16,12 @@ def chudnovsky(digits):
     return x
 
 
-def external_example():
-    from math import factorial as fact
-
-    i = 1
-    sgn = -1
-    a = 13591409
-    b = 545140134
-    c = 640320
-    d = c ** (3/2)
-    s = a / d
-    ss = 3
-    while str(ss)[:12] != '3.1415926535' :
-        tmp = (sgn * fact(6*i) * (a + b*i) /
-        (fact(3*i) * fact(i) ** 3 * d * c**(3*i)))
-        s += tmp
-        sgn *= -1
-        i += 1
-        ss = 1 / (12*s)
-    print(ss)
-    print(i-1)
-
+def get_pi(accuracy: int) -> float:
+    if accuracy < 1 or accuracy > 11:
+        return 0
+    pre_pi = chudnovsky(10)
+    pre_pi = str(pre_pi)[:accuracy+2]
+    return float(pre_pi)
 
 if __name__ == '__main__':
-    external_example()
-    exit(0)
-    for i in range(1, 12):
-        print(i, ':', chudnovsky(i))
+    print(get_pi(10))

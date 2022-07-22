@@ -16,7 +16,7 @@ file.close()
 def find_words_with_digits(strochka: str) -> str:
     strochka = strochka.split()
     temp_str = ' '
-    digits_str = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
+    digits_str = "0,1,2,3,4,5,6,7,8,9"
 
     for word in strochka:
         for letter in word:
