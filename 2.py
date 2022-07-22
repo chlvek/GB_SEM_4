@@ -7,7 +7,7 @@ import random
 lst = [random.randint(1, 50) for i in range(1, 11)]
 
 
-def unique_el(initial_list:list) -> list:
+def unique_el(initial_list: list) -> list:
     count = {}
     for i in initial_list:
         is_exist = count.get(i)
@@ -16,7 +16,7 @@ def unique_el(initial_list:list) -> list:
         else:
             count[i] = 1
 
-    return list(count.keys())
+    return [key for key, value in count.items() if value == 1]
 
 
 if __name__ == '__main__':
