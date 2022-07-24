@@ -26,10 +26,8 @@ def compress(data):
 
 
 if __name__ == "__main__":
-    original_file_path = 'original'
-    compressed_file_path = 'compressed'
 
-    with open(original_file_path, 'r') as file:
+    with open('original_file_path.txt', 'r') as file:
         data = file.read()
 
     print(f'Initial data:\n{data}')
@@ -38,5 +36,5 @@ if __name__ == "__main__":
 
     print(f'Compressed data:\n{compressed}')
 
-    with open(compressed_file_path, 'w') as file:
+    with open('compressed_file_path.txt' , 'w') as file:
         file.write(compressed)
