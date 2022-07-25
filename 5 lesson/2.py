@@ -3,6 +3,7 @@
 # Все конфеты оппонента достаются сделавшему последний ход.
 # Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
 
+import random
 
 def input_number_of_candies(current_number_of_candies: int) -> int:
     while True:
@@ -21,17 +22,34 @@ def input_number_of_candies(current_number_of_candies: int) -> int:
     return number_of_candies
 
 
-def player_turn(number_of_candies: int, is_bot: bool):
+def player_turn(number_of_candies: int, is_bot: bool = False):
     if is_bot:
         pass
     else:
         turn_candies = input_number_of_candies(number_of_candies)
         return turn_candies
 
+
 if __name__ == "__main__":
     number_of_candies = 2021
     player1_candies = 0
     player2_candies = 0
 
-    while number_of_candies > 0 :
-        player1_candies
+    player1_turn = random.randint(1,100) < 50
+
+    while number_of_candies > 0:
+        if player1_turn:
+            candies = player_turn(number_of_candies)
+            player1_candies = candies + player2_candies
+            player2_candies = 0
+        else:
+            candies = player_turn(number_of_candies)
+            player2_candies = candies + player1_candies
+            player1_candies = 0
+
+
+    print("game is over")
+
+    winner = "player1" if player1_candies > 0 else "player2"
+
+    print(f"{winner} wins!")
