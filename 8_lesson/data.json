@@ -1,0 +1,50 @@
+{
+    "1": {
+        "name": "Прочитать книгу",
+        "description": "Остановилась на 84 странице",
+        "due date": null,
+        "complete": false
+    },
+    "2": {
+        "name": "Убрать веши",
+        "description": "",
+        "due date": null,
+        "complete": true
+    },
+    "3": {
+        "name": "Позвноить на почту",
+        "description": "Номер: +7 939 123 45 67",
+        "due date": "05.08.2022",
+        "complete": true
+    },
+    "4": {
+        "name": "Доесть поке",
+        "description": "",
+        "due date": "06.08.2022",
+        "complete": true
+    },
+    "5": {
+        "name": "Протереть пыль",
+        "description": "Не забыть про верхнюю полку на кухне",
+        "due date": null,
+        "complete": true
+    },
+    "6": {
+        "name": "Выгулять собаку",
+        "description": "",
+        "due date": null,
+        "complete": false
+    },
+    "7": {
+        "name": "Записаться на йогу",
+        "description": "+7 000 987 65 32",
+        "due date": "09.08.2022",
+        "complete": false
+    },
+    "8": {
+        "name": "Закончить презентацию",
+        "description": "Осталось 7 слайдов",
+        "due date": "15.08.2022",
+        "complete": false
+    }
+}
