@@ -64,6 +64,7 @@ class Cli:
                 return
             except Exception as exc:
                 print(f'Cli app {self.title} crushed with error: {exc}')
+                exit(1)
 
     def input_command(self) -> List[str]:
         '''Prompt a user to input a command.'''
