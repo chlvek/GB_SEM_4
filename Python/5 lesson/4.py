@@ -36,5 +36,5 @@ if __name__ == "__main__":
 
     print(f'Compressed data:\n{compressed}')
 
-    with open('compressed_file_path.txt' , 'w') as file:
+    with open('compressed_file_path.txt', 'w') as file:
         file.write(compressed)
